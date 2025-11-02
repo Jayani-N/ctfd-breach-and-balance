@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  ctfd:
+    image: ctfd/ctfd:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - breach_and_balance:/var/lib/ctfd
+    restart: unless-stopped
+
+volumes:
+  breach_and_balance:
